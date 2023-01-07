@@ -16,8 +16,8 @@ const Header = () => {
   }
   return (
     <div className={cl.Header}>
-      <h2>QPI</h2>
       <div className={cl.Header_select}>
+        <h2>QPI</h2>
         <img src={phone} alt="phone" />
         <p>Выбрать модель телефона</p>
         {model ? (

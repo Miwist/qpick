@@ -1,13 +1,19 @@
-import React from 'react'
-import Header from './Header/Header'
-import cl from "./Main.module.scss"
+import React from "react";
+import Footer from "./Footer/Footer";
+import Header from "./Header/Header";
+import cl from "./Main.module.scss";
+import Banner from "./Product/Banner";
+import ProductList from "./Product/ProductList";
 
 const Main = () => {
   return (
     <div className={cl.Main}>
-        <Header />
+      <Header />
+      <Banner />
+      <ProductList />
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default Main
+export default Main;

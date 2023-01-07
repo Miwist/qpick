@@ -11,13 +11,15 @@
   }
   h2 {
     font-family: "Montserrat";
+    margin-right: 50px;
   }
   img {
-    margin: 5px;
+    margin: 10px;
     cursor: pointer;
   }
   .Header_select,
-  .Header_purchase, .Header__choice_item {
+  .Header_purchase,
+  .Header__choice_item {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -25,31 +27,39 @@
   .Header__choice {
     display: flex;
     flex-direction: column;
-    padding: 15px;
-    margin-left: 20px;
+    padding: 20px;
+    margin-left: 120px;
     margin-top: 300px;
     z-index: 2;
     position: absolute;
     width: 200px;
     min-height: 250px;
     max-height: 800px;
-    background-color: #eaeaea;
+    background-color: #fffefe;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     border-radius: 0px 0px 30px 30px;
     .Header__choice_item {
-       i {
+      i {
         font-size: 25px;
-       }
+      }
+      h3 {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 17px;
+        color: #1c1c27;
+      }
     }
     .Header_choice__phone {
-        margin: 5px;
-        margin-bottom: 10px;
-        p {
-            cursor: pointer;
-        }
-        p:hover {
-            color: orange;
-        }
+      margin: 5px;
+      margin-bottom: 10px;
+      p {
+        font-size: 15px;
+        color: #1c1c27;
+        cursor: pointer;
+      }
+      p:hover {
+        color: orange;
+      }
     }
   }
 }

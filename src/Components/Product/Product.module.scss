@@ -1,0 +1,125 @@
+.Banner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 200px;
+  background-color: #101010;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  margin-bottom: 45px;
+  h2 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 37px;
+    color: #ffffff;
+  }
+  img {
+    width: 320px;
+    height: 220px;
+  }
+  .Banner__text {
+    max-width: 300px;
+  }
+}
+
+.ProductList {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  span {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #838383;
+    margin-bottom: 20px;
+  }
+  .covers,
+  .headphones {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 30px;
+  }
+  .covers {
+    img {
+      max-width: 150px;
+      max-height: 290px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .headphones {
+    img {
+      max-width: 240px;
+      max-height: 220px;
+      margin-bottom: 10px;
+    }
+  }
+  .covers_item,
+  .headphones_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    height: 400px;
+    background: #ffffff;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    p {
+      font-weight: 600;
+      font-size: 17px;
+      line-height: 21px;
+      color: #1c1c27;
+    }
+  }
+
+  .headphones_item {
+    display: flex;
+
+    .favorite {
+      margin-right: 70%;
+      i {
+        cursor: pointer;
+      }
+      i:hover {
+        color: red;
+      }
+    }
+    .price {
+      display: flex;
+      flex-direction: row;
+
+      p {
+        margin-left: 20px;
+      }
+      margin-bottom: 25px;
+    }
+    .rating {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-right: 50%;
+      .star {
+        width: 22px;
+        height: 20px;
+        margin-bottom: 0;
+      }
+      i {
+        background: #ffce7f;
+      }
+      p {
+        color: #838383;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 17px;
+        line-height: 21px;
+        margin-left: 10px;
+      }
+    }
+  }
+}
