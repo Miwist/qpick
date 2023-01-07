@@ -13,6 +13,7 @@
   .Footer_nav {
     p {
       cursor: pointer;
+      margin-bottom: 10px;
     }
     p:hover {
       color: orange;
@@ -23,10 +24,13 @@
   }
 
   .Footer_service {
+    p {
+        margin-bottom: 20px;
+    }
     .language {
       display: flex;
       flex-direction: row;
-      margin: 5px;
+      
       p {
         margin-left: 5px;
         cursor: pointer;

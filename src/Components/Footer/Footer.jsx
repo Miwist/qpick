@@ -17,7 +17,7 @@ const Footer = () => {
         <div className={cl.language}>
           <i className="ri-global-line"></i>
           <p>Каз</p>
-          <p>Рус</p>
+          <p style={{ color: "orange" }}>Рус</p>
           <p>Eng</p>
         </div>
       </div>

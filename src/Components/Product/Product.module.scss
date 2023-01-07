@@ -16,6 +16,7 @@
     line-height: 37px;
     color: #ffffff;
   }
+
   img {
     width: 320px;
     height: 220px;
@@ -29,6 +30,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  margin-bottom: 20px;
   span {
     font-style: normal;
     font-weight: 600;
@@ -41,7 +43,7 @@
   .headphones {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    gap: 4rem;
     margin-bottom: 30px;
   }
   .covers {
@@ -54,9 +56,12 @@
 
   .headphones {
     img {
-      max-width: 240px;
       max-height: 220px;
-      margin-bottom: 10px;
+    }
+    .img {
+      max-width: 240px;
+      height: 220px;
+      margin-bottom: 15px;
     }
   }
   .covers_item,
@@ -79,15 +84,11 @@
   }
 
   .headphones_item {
-    display: flex;
 
     .favorite {
       margin-right: 70%;
-      i {
+      img {
         cursor: pointer;
-      }
-      i:hover {
-        color: red;
       }
     }
     .price {
