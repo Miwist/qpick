@@ -1,0 +1,55 @@
+.Header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  i {
+    font-size: 22px;
+    cursor: pointer;
+  }
+  h2 {
+    font-family: "Montserrat";
+  }
+  img {
+    margin: 5px;
+    cursor: pointer;
+  }
+  .Header_select,
+  .Header_purchase, .Header__choice_item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .Header__choice {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    margin-left: 20px;
+    margin-top: 300px;
+    z-index: 2;
+    position: absolute;
+    width: 200px;
+    min-height: 250px;
+    max-height: 800px;
+    background-color: #eaeaea;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 0px 0px 30px 30px;
+    .Header__choice_item {
+       i {
+        font-size: 25px;
+       }
+    }
+    .Header_choice__phone {
+        margin: 5px;
+        margin-bottom: 10px;
+        p {
+            cursor: pointer;
+        }
+        p:hover {
+            color: orange;
+        }
+    }
+  }
+}
