@@ -1,12 +1,23 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import cl from "./Header.module.scss";
 import favorite from "../../assets/icons/favorite.png";
 import basket from "../../assets/icons/basket.png";
 import phone from "../../assets/icons/phone.png";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [model, setModel] = useState(false);
   const [selectModel, setSelectModel] = useState(0);
+  let favoriteAll = JSON.parse(localStorage.getItem("favorite"));
+  let basketAll = JSON.parse(localStorage.getItem("basket"));
+
+
+
+  useEffect(() => {
+    basketAll = JSON.parse(localStorage.getItem("basket"));
+    favoriteAll = JSON.parse(localStorage.getItem("favorite"));
+  }, []);
+
   function openModel() {
     if (model === false) {
       setModel(true);
@@ -17,7 +28,7 @@ const Header = () => {
   return (
     <div className={cl.Header}>
       <div className={cl.Header_select}>
-        <h2>QPI</h2>
+        <h2>QPICK</h2>
         <img src={phone} alt="phone" />
         <p>Выбрать модель телефона</p>
         {model ? (
@@ -126,10 +137,21 @@ const Header = () => {
       </div>
       <div className={cl.Header_purchase}>
         <div className={cl.Header__favorite}>
-          <img src={favorite} alt="favorite" />
+          {favoriteAll.length > 0 && (
+            <div className={cl.amount}>{favoriteAll.length}</div>
+          )}
+          <Link to="Favorite">
+            <img src={favorite} alt="favorite" />
+          </Link>
         </div>
         <div className={cl.Header__basket}>
-          <img src={basket} alt="basket" />
+          {basketAll.length > 0 && (
+            <div className={cl.amount}>{basketAll.length}</div>
+          )}
+
+          <Link to="Basket">
+            <img src={basket} alt="basket" />
+          </Link>
         </div>
       </div>
     </div>

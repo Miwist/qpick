@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div className={cl.Footer}>
       <div>
-        <h2>QPI</h2>
+        <h2>QPICK</h2>
       </div>
       <div className={cl.Footer_nav}>
         <p>Избранное</p>

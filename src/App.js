@@ -1,5 +1,6 @@
-import Main from './Components/Main';
-import './index.scss';
+import Main from "./Components/Main";
+
+import "./index.scss";
 
 function App() {
   return (

@@ -5,6 +5,9 @@
   justify-content: space-around;
   align-items: center;
 
+  link {
+    text-decoration: none;
+  }
   i {
     font-size: 22px;
     cursor: pointer;
@@ -60,6 +63,28 @@
       p:hover {
         color: orange;
       }
+    }
+  }
+  .Header__favorite,
+  .Header__basket {
+    .amount {
+      position: absolute;
+      font-size: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fffefe;
+      z-index: 3;
+      margin-left: 30px;
+      width: 18px;
+      height: 18px;
+      background-color: orange;
+      border-radius: 50%;
+    }
+  }
+  .Header__basket {
+    .amount {
+      margin-top: 3px;
     }
   }
 }
