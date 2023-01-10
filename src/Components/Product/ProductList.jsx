@@ -1,15 +1,10 @@
 import React, { useEffect, useState } from "react";
 import cl from "./Product.module.scss";
 import { covers, headphones, headphonesAir } from "./Products";
-import active from "../../assets/icons/favoriteActive.png";
-import heart from "../../assets/icons/favorite.png";
-import basket from "../../assets/icons/basket.png";
 import Banner from "./Banner";
 
 const ProductList = () => {
   const [counter, setCounter] = useState(0);
-  const [modal, setModal] = useState(false);
-  const [id, setId] = useState(0);
   let favoriteAll = JSON.parse(localStorage.getItem("favorite"));
   let basketAll = JSON.parse(localStorage.getItem("basket"));
 
@@ -46,7 +41,7 @@ const ProductList = () => {
   function addBasketAir(id) {
     let item = basketAll.filter((item) => item.id === id);
     let head = headphonesAir.filter((item) => item.id === id);
-    let headId = headphonesAir.indexOf(head[0]) 
+    let headId = headphonesAir.indexOf(head[0]);
     if (item[0]) {
       let indexId = basketAll.indexOf(item[0]);
       basketAll[indexId].count = basketAll[indexId].count + 1;
@@ -68,12 +63,11 @@ const ProductList = () => {
       favoriteAll.splice(headId, 1);
       alert("Удалено из избранного");
     }
-    favoriteAll.push(headphones[id]);
-    headphonesAir[id].favorite = true;
-
+    headphonesAir[headId].favorite = true;
+    favoriteAll.push(headphonesAir[headId]);
     alert("Добавлено в избранное");
     localStorage.setItem("favorite", JSON.stringify(favoriteAll));
-    console.log(headphones[id].favorite);
+
     setCounter((prev) => prev + 1);
   }
 

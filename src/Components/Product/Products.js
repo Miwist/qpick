@@ -35,7 +35,8 @@ export let headphones = [
     rating: 4.7,
     price: 2500,
     star: star,
-    count: 1
+    count: 1,
+    favorite: false,
   },
   {
     name: "Apple EarPods",
@@ -44,7 +45,8 @@ export let headphones = [
     rating: 4.5,
     price: 2100,
     star: star,
-    count: 1
+    count: 1,
+    favorite: false,
   },
   {
     name: "Apple EarPods 311",
@@ -53,38 +55,40 @@ export let headphones = [
     rating: 4.2,
     price: 2350,
     star: star,
-    count: 1
+    count: 1,
+    favorite: false,
   },
 ];
 
 export let headphonesAir = [
-    {
-      name: "Apple AirPods",
-      img: airpods,
-      id: 4,
-      rating: 4.7,
-      price: 10500,
-      star: star,
-      count: 1
-    },
-    {
-      name: "GERLAX GH-04",
-      img: gerlax,
-      id: 5,
-      rating: 4.5,
-      price: 6100,
-      star: star,
-      count: 1
-    },
-    {
-      name: "BOROFONE BO4",
-      img: borofone,
-      id: 6,
-      rating: 4.2,
-      price: 5350,
-      star: star,
-      count: 1
-    },
-  ];
-  
- 
+  {
+    name: "Apple AirPods",
+    img: airpods,
+    id: 4,
+    rating: 4.7,
+    price: 10500,
+    star: star,
+    count: 1,
+    favorite: false,
+  },
+  {
+    name: "GERLAX GH-04",
+    img: gerlax,
+    id: 5,
+    rating: 4.5,
+    price: 6100,
+    star: star,
+    count: 1,
+    favorite: false,
+  },
+  {
+    name: "BOROFONE BO4",
+    img: borofone,
+    id: 6,
+    rating: 4.2,
+    price: 5350,
+    star: star,
+    count: 1,
+    favorite: false,
+  },
+];

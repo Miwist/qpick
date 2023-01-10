@@ -2,21 +2,21 @@ import React, { useEffect, useState } from "react";
 import cl from "./Basket.module.scss";
 import basket from "../../assets/img/basketEmpty.png";
 import iconDelete from "../../assets/icons/delete.png";
-
 import { Link } from "react-router-dom";
 
 const Basket = () => {
   let basketAll = JSON.parse(localStorage.getItem("basket"));
   const [total, setTotal] = useState(0);
 
-  function totalPrice() {
-    for (let i = 0; i < basketAll.length; i++) {
-      setTotal((prev) => prev + basketAll[i].price * basketAll[i].count);
-    }
-  }
-
   useEffect(() => {
-    totalPrice();
+    if (total === 0) {
+      let price = [];
+      for (let i = 0; i < basketAll.length; i++) {
+        price.push(basketAll[i].price * basketAll[i].count);
+        let item = price.reduce((sum, a) => sum + a, 0);
+        setTotal(item);
+      }
+    }
   }, []);
 
   useEffect(() => {
@@ -49,10 +49,14 @@ const Basket = () => {
     localStorage.setItem("basket", JSON.stringify(basketAll));
   }
 
+  function totalSum() {
+    localStorage.setItem("totalPrice", JSON.stringify(total));
+  }
+
   return (
     <div className={cl.Basket}>
       {basketAll.length <= 0 ? (
-        <div className={cl.Basket}>
+        <div className={cl.Basket_empty}>
           <img src={basket} alt="basket" />
           <h2>Корзина пуста</h2>
           <p>Но это никогда не поздно исправить</p>
@@ -61,7 +65,7 @@ const Basket = () => {
           </Link>
         </div>
       ) : (
-        <div className={cl.Basket}>
+        <div className={cl.Basket_active}>
           <h2>Корзина</h2>
           <div className={cl.Basket_row}>
             <div className={cl.Basket_list}>
@@ -106,7 +110,10 @@ const Basket = () => {
                 <h2>Итого:</h2>
                 <p>{total}</p>
               </div>
-              <button type="button">Перейти к оформлению</button>
+              <Link to="/Ordering" onClick={totalSum}>
+                <button type="button">Перейти к оформлению</button>
+              </Link>
+
               <Link to="/">
                 <button type="button">В каталог товаров</button>
               </Link>
