@@ -6,6 +6,12 @@ import { Link } from "react-router-dom";
 const Ordering = () => {
   let basketAll = JSON.parse(localStorage.getItem("basket"));
   let totalSum = JSON.parse(localStorage.getItem("totalPrice"));
+
+  function BuyEnd() {
+    localStorage.setItem("basket", JSON.stringify([]));
+    localStorage.setItem("totalPrice", JSON.stringify(0));
+  }
+
   return (
     <div className={cl.Ordering}>
       <h2>Оформление</h2>
@@ -53,8 +59,12 @@ const Ordering = () => {
             <h2>Ваш заказ</h2>
             {basketAll.map((item) => (
               <div className={cl.payment_box__item}>
-                <p>x {item.count}</p>
-                <p>{item.name}</p> <b>{item.price * item.count} руб</b>
+                <p>x {item.count} шт</p>
+                <p>{item.name}</p>
+                <p>
+                  ({item.price} * {item.count} шт)
+                </p>
+                <b>{item.price * item.count} руб</b>
               </div>
             ))}
             <div className={cl.payment_box__item}>
@@ -90,11 +100,11 @@ const Ordering = () => {
           <div className={cl.payment_box}>
             <h2>Номер получателя</h2>
             <div className={cl.input}>
-              <input type="text" name="phone" placeholder="+7 ___ ___ __ __"/>
+              <input type="text" name="phone" placeholder="+7 ___ ___ __ __" />
               <i className="ri-pencil-line"></i>
             </div>
           </div>
-          <Link to="/SuccessOrdering">
+          <Link to="/SuccessOrdering" onClick={BuyEnd}>
             <button type="button">Закончить оформление</button>
           </Link>
         </div>
