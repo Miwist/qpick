@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/qpick/static/css/main.ec163dad.css",
+    "main.js": "/qpick/static/js/main.728335c7.js",
+    "static/media/iPhone13.png": "/qpick/static/media/iPhone13.7ce39eb1dd3c81da39b1.png",
+    "static/media/earpods3.png": "/qpick/static/media/earpods3.76c4ac9b4ca9a310c088.png",
+    "static/media/borofone.png": "/qpick/static/media/borofone.304bfe18b4bd7ea6d4bf.png",
+    "static/media/mellow.png": "/qpick/static/media/mellow.8f8e2ff690936e8bd3b7.png",
+    "static/media/map.png": "/qpick/static/media/map.ec701f14bc92cc97cbc9.png",
+    "static/media/black.png": "/qpick/static/media/black.82b85a7ab0a0378379f2.png",
+    "static/media/gerlax.png": "/qpick/static/media/gerlax.129df75ab0875a66ce26.png",
+    "static/media/glasses.png": "/qpick/static/media/glasses.d5ae8fdae136ee2ea1b7.png",
+    "static/media/earpods.png": "/qpick/static/media/earpods.f41bc02ea94e028a37bf.png",
+    "static/media/airpods.png": "/qpick/static/media/airpods.9949ef24b237a133a1e8.png",
+    "static/media/earpods2.png": "/qpick/static/media/earpods2.743b980d9ce598671d6f.png",
+    "index.html": "/qpick/index.html",
+    "main.ec163dad.css.map": "/qpick/static/css/main.ec163dad.css.map",
+    "main.728335c7.js.map": "/qpick/static/js/main.728335c7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ec163dad.css",
+    "static/js/main.728335c7.js"
+  ]
+}
